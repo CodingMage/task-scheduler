@@ -1,4 +1,5 @@
 import React from "react";
+import SchedulerShell from "./Scheduler";
 import Sidebar from "./Sidebar";
 
 function Shell() {
@@ -7,7 +8,9 @@ function Shell() {
       <div className="shell_sidebar">
         <Sidebar />
       </div>
-      <div className="shell_scheduler"></div>
+      <div className="shell_scheduler">
+        <SchedulerShell />
+      </div>
     </div>
   );
 }
