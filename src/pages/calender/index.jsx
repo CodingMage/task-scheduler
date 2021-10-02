@@ -1,10 +1,12 @@
 import React from "react";
-import Hello from "./hello";
+import Shell from "../../components/layout/Shell";
+// import Hello from "./hello";
 
 function Home() {
   return (
     <div>
-      <Hello />
+      {/* <Hello /> */}
+      <Shell />
     </div>
   );
 }

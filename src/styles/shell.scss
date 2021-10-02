@@ -1,0 +1,15 @@
+.shell {
+  min-height: 100vh;
+  background: #e5e5e5;
+  &_sidebar {
+    min-height: 100vh;
+    width: 100%;
+    background: #fffdf8;
+    max-width: 281px;
+  }
+  &_scheduler {
+    width: 100%;
+    min-height: 100vh;
+    background: #d3e5ff;
+  }
+}

@@ -1,0 +1,62 @@
+.sidebar {
+  &_brand {
+    padding: 35.11px 0 0 40.05px;
+
+    svg {
+      width: 113.98px;
+      height: 24.73px;
+    }
+  }
+
+  &_nav {
+    margin-top: 217.87px;
+    padding: 0 35px 0 34px;
+    &-nav {
+      margin-bottom: 20px;
+      .nav_heading {
+        width: 75px;
+        height: 16px;
+        font-family: $Nunito;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+        color: #666666;
+        margin-bottom: 20px;
+      }
+      .nav_body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        &-link {
+          width: 200px;
+          height: 39px;
+          display: flex;
+          //   justify-content: center;
+          align-items: center;
+          gap: 10px;
+
+          font-family: $Nunito;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 16px;
+          cursor: pointer;
+          /* primary */
+          color: #666666;
+        }
+      }
+    }
+  }
+}
+
+.calenderActive {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 39px;
+  background: #f97b5c;
+  border-radius: 10px;
+  padding-left: 19px;
+  color: white !important;
+}
