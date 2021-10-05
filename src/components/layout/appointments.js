@@ -4,40 +4,45 @@ export const appointmentData = [
     startDate: new Date(2018, 5, 25, 12, 35),
     endDate: new Date(2018, 5, 25, 15, 0),
     id: 0,
-    members: [1, 3, 5],
+    doctors: [1, 3, 5],
     location: "Room 1",
+    patient: "Anant Agarwal",
   },
   {
-    title: "Book Flights to San Fran for Sales Trip",
+    title: "Full Checkup",
     startDate: new Date(2018, 5, 26, 12, 35),
     endDate: new Date(2018, 5, 26, 15, 0),
     id: 1,
-    members: [2, 4],
+    doctors: [2, 4],
     location: "Room 2",
+    patient: "Anant Agarwal",
   },
   {
-    title: "Install New Router in Dev Room",
+    title: "Dentist",
     startDate: new Date(2018, 5, 27, 12, 35),
     endDate: new Date(2018, 5, 27, 15, 0),
     id: 2,
-    members: [1, 3],
+    doctors: [1, 3],
     location: "Room 3",
+    patient: "Anant Agarwal",
   },
   {
-    title: "Approve Personal Computer Upgrade Plan",
+    title: "Approve Patient Prescription",
     startDate: new Date(2018, 5, 28, 12, 35),
     endDate: new Date(2018, 5, 28, 15, 0),
     id: 3,
-    members: [4, 1],
+    doctors: [4, 1],
     location: "Room 4",
+    patient: "Anant Agarwal",
   },
   {
     title: "Final Budget Review",
     startDate: new Date(2018, 5, 29, 12, 35),
     endDate: new Date(2018, 5, 29, 15, 0),
     id: 4,
-    members: [5, 1, 3],
+    doctors: [5, 1, 3],
     location: "Room 5",
+    patient: "Anant Agarwal",
   },
 ];
 
@@ -54,8 +59,8 @@ export const resourcesData = [
     ],
   },
   {
-    fieldName: "members",
-    title: "Members",
+    fieldName: "doctors",
+    title: "Doctors",
     allowMultiple: true,
     instances: [
       { id: 1, text: "Andrew Glover" },
@@ -97,8 +102,8 @@ export const locations = [
 
 export const res = [
   {
-    fieldName: "members",
-    title: "Members",
+    fieldName: "doctors",
+    title: "Doctors",
     instances: doctors,
     allowMultiple: true,
   },
@@ -111,6 +116,6 @@ export const res = [
 
 export const grouping = [
   {
-    resourceName: "members",
+    resourceName: "doctors",
   },
 ];

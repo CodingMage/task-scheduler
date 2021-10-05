@@ -1,0 +1,139 @@
+.tooltip {
+  padding: 18px 17px 17px 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-text {
+      font-family: $Nunito;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 25px;
+      color: #000000;
+    }
+    &-icon {
+      cursor: pointer;
+    }
+  }
+
+  &-content {
+    height: 70px;
+    background: #fff1d6;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 28.5px 23px 14px;
+
+    &_left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      &-img {
+        display: flex;
+      }
+
+      &-text {
+        font-family: $Nunito;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 19px;
+
+        color: #313131;
+      }
+    }
+  }
+
+  &-subContent {
+    display: flex;
+    gap: 10px;
+
+    span {
+      /* SB */
+      font-family: $Nunito;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 19px;
+      color: #666666;
+    }
+  }
+
+  &-footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    span {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-family: $Nunito;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 19px;
+      color: #666666;
+    }
+  }
+  &-divider {
+    height: 0px;
+    margin-right: -27px;
+    margin-left: -27px;
+    border: 0.3px solid #cccccc;
+  }
+
+  &-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_left {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      &-btn {
+        cursor: pointer;
+        width: 98px;
+        height: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        gap: 10px;
+      }
+
+      .btn1 {
+        background: #ffe0d9;
+        font-family: $Nunito;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 19px;
+        color: #f97b5c;
+      }
+      .btn2 {
+        background: #f9f9f9;
+        font-family: $Nunito;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 19px;
+        color: #666666;
+      }
+    }
+    &_right {
+      cursor: pointer;
+    }
+  }
+}
+
+//MI UI
+.Layout-popover-286 {
+  width: 100% !important;
+  max-width: 436px !important;
+}

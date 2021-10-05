@@ -2,7 +2,7 @@ import * as React from "react";
 import { More } from "../icons";
 import {
   appointmentData,
-  resourcesData,
+  // resourcesData,
   grouping,
   res,
   doctors,
@@ -12,8 +12,8 @@ import {
   ViewState,
   GroupingState,
   IntegratedGrouping,
-  IntegratedEditing,
-  EditingState,
+  // IntegratedEditing,
+  // EditingState,
 } from "@devexpress/dx-react-scheduler";
 import {
   Scheduler,
@@ -30,10 +30,12 @@ import {
   GroupingPanel,
 } from "@devexpress/dx-react-scheduler-material-ui";
 import { makeStyles } from "@material-ui/core/styles";
-import { Content, Header, ExternalViewSwitcher } from "./LayoutProps.jsx";
+import { ContentMarkUp, Header, ExternalViewSwitcher } from "./LayoutProps.jsx";
 // const currentDate = "2018-11-01";
 
 const findColorByGroupId = (id) => doctors.find((item) => item.id === id).color;
+// const findDoctorByGroupId = (id) =>
+//   doctors.find((item) => item.id === id).color;
 
 const useGroupingStyles = (group) => {
   const color = findColorByGroupId(group.id);
@@ -81,7 +83,26 @@ const GroupingPanelCell = React.memo(({ group, ...restProps }) => {
 const SchedulerShell = () => {
   const [isActive, setIsActive] = React.useState(true);
   const [currentViewName, setCurrentViewName] = React.useState("Day");
+  const [isVisible, setIsVisible] = React.useState(false);
 
+  const closeTooltip = () => {
+    setIsVisible(!isVisible);
+  };
+
+  const Content = ({ children, appointmentData, group, ...restProps }) => {
+    console.log(group);
+    return (
+      <AppointmentTooltip.Content
+        {...restProps}
+        appointmentData={appointmentData}
+      >
+        <ContentMarkUp
+          closeTooltip={closeTooltip}
+          appointmentData={appointmentData}
+        />
+      </AppointmentTooltip.Content>
+    );
+  };
   return (
     <div className="schedulerShell">
       <ExternalViewSwitcher
@@ -89,6 +110,7 @@ const SchedulerShell = () => {
         setIsActive={setIsActive}
         setCurrentViewName={setCurrentViewName}
       />
+
       <Paper className="scheduler-paper">
         <Scheduler data={appointmentData} height={660}>
           <ViewState
@@ -105,11 +127,13 @@ const SchedulerShell = () => {
           {/* <ViewSwitcher /> */}
           <Appointments />
 
-          <Resources data={res} mainResourceName={"members"} />
+          <Resources data={res} mainResourceName={"doctors"} />
           <IntegratedGrouping />
           <AppointmentTooltip
             headerComponent={Header}
             contentComponent={Content}
+            visible={isVisible}
+            onVisibilityChange={() => closeTooltip()}
           />
           <AppointmentForm />
 

@@ -1,50 +1,68 @@
 import { AppointmentTooltip } from "@devexpress/dx-react-scheduler-material-ui";
-import { Clock, Close, Exit, Happy } from "../icons";
+import { Cancel, CheckIn, Clock, Close, Edit, Exit, Happy } from "../icons";
 import Boy from "../../asset/Boy.png";
 
-export const Content = ({ children, appointmentData, ...restProps }) => {
+export const ContentMarkUp = ({ closeTooltip, appointmentData }) => {
   console.log(appointmentData);
   return (
-    <AppointmentTooltip.Content
-      {...restProps}
-      appointmentData={appointmentData}
-    >
-      <div className="tooltip">
-        <div className="tooltip-header">
-          <div className="tooltip-header-text">Full Checkup</div>
-          <div className="tooltip-header-icon">
-            <Close />
-          </div>
-        </div>
-        <div className="tooltip-content">
-          <div className="tooltip-content-img">
-            <img src={Boy} alt="" />
-          </div>
-          <div className="tooltip-content-text">Arnold Roland</div>
-          <div className="tooltip-content-icon">
-            <Exit />
-          </div>
-        </div>
-
-        <div className="tooltip-subContent">
-          <Clock /> 20 August, 2021 8:30am - 20 August, 2020 9:30am
-        </div>
-
-        <div className="tooltip-footer">
-          <Happy />
-          <img src={Boy} alt="" />
-          Dr Mayowa Afolabi
+    <div className="tooltip">
+      <div className="tooltip-header">
+        <div className="tooltip-header-text">{appointmentData.title}</div>
+        <div className="tooltip-header-icon" onClick={() => closeTooltip()}>
+          <Close />
         </div>
       </div>
-    </AppointmentTooltip.Content>
+      <div className="tooltip-content">
+        <div className="tooltip-content_left">
+          <div className="tooltip-content_left-img">
+            <img src={Boy} alt="" />
+          </div>
+          <div className="tooltip-content_left-text">
+            {appointmentData.patient}
+          </div>
+        </div>
+
+        <div className="tooltip-content-icon">
+          <Exit />
+        </div>
+      </div>
+
+      <div className="tooltip-subContent">
+        <Clock />{" "}
+        <span>
+          {appointmentData.startDate.toUTCString()}-{" "}
+          {appointmentData.endDate.toUTCString()}
+        </span>
+      </div>
+
+      <div className="tooltip-footer">
+        <Happy />
+        <span>
+          <img src={Boy} alt="" />
+          Dr Mayowa Afolabi
+        </span>
+      </div>
+      <div className="tooltip-divider"></div>
+      <div className="tooltip-bottom">
+        <div className="tooltip-bottom_left">
+          <div className="tooltip-bottom_left-btn btn1">
+            Check in <CheckIn />
+          </div>
+          <div className="tooltip-bottom_left-btn btn2">
+            Cancel <Cancel />
+          </div>
+        </div>
+        <div className="tooltip-bottom_right">
+          <Edit />
+        </div>
+      </div>
+    </div>
   );
 };
 
 export const Header = ({ children, appointmentData, ...restProps }) => (
   <AppointmentTooltip.Header {...restProps} appointmentData={appointmentData}>
-    <div className="">
-      <button>{appointmentData.title}</button>
-    </div>
+    <div className="rm">{/* <button>{appointmentData.title}</button> */}</div>
   </AppointmentTooltip.Header>
 );
 
