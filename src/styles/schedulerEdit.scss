@@ -1,0 +1,84 @@
+.schedulerShell {
+  position: relative;
+}
+
+.scheduler-paper {
+  padding-top: 37px;
+}
+
+.NavigationButton-button-4 {
+  width: 30px !important;
+  height: 30px !important;
+
+  /* Shades 2 */
+  background: #f9f9f9 !important;
+}
+
+.RootBase-root-3 {
+  display: flex;
+  gap: 30px !important;
+}
+.TodayButtonBase-button-14 {
+  border: none !important;
+}
+
+//External View Switcher
+.switch-container {
+  width: 179px;
+  height: 41px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 4px;
+  position: absolute;
+  right: 39px;
+  top: 49px;
+  z-index: 99999;
+  .switch_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-day {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 91px;
+      height: 33px;
+      cursor: pointer;
+    }
+
+    .activeDay {
+      background: #ffffff;
+      border-radius: 10px;
+    }
+  }
+}
+
+.makeStyles-titleContainer-139 {
+  display: none !important;
+}
+
+// .MuiTableRow-root {
+//   display: none;
+// }
+
+.makeStyles-table-34 {
+  tbody {
+    tr {
+      &:last-child {
+        display: none !important;
+      }
+    }
+  }
+}
+
+.moreIcon {
+  cursor: pointer;
+}
+
+.makeStyles-titleContainer-338,
+.makeStyles-contentContainer-339,
+.makeStyles-resourceContainer-340,
+.tooltip_header {
+  display: none !important;
+}
