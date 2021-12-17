@@ -112,7 +112,7 @@ const SchedulerShell = () => {
       />
 
       <Paper className="scheduler-paper">
-        <Scheduler data={appointmentData} height={660}>
+        <Scheduler data={appointmentData}>
           <ViewState
             currentViewName={currentViewName}
             defaultCurrentDate="2018-06-27"
